@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <title>JavaScript</title>
+<body>
+
+<h2>Musician guess by Jayachandra Eladandi</h2>
+
+<form>
+    <label for="form1_secret">Enter the secret musician name</label>
+    <input id="form1_secret" name="form1_secret" type="password" min=10 max=50 step=2 value="John Lennon">
+    <label for="form2_guess">Guess the musician</label>
+    <input id="form2_guess" name="form2_guess" type="text" autofocus>
+    <input type="button" onclick="checkGuess()" value="Check the guess">
+</form>
+<p id="resultM">Result is here</p>
+<script>
+    var correct=0;
+    var wrong=0;
+    function checkGuess(){
+        console.log("Getting form values")
+        secret= document.getElementById("form1_secret").value
+        guess=document.getElementById("form2_guess").value
+        if(secret==guess){
+            correct=correct+1;
+        
+            alert("You got it right");
+        }
+        else{
+            wrong=wrong+1;
+        
+            alert("Wrong Musician");
+        }
+        document.getElementById("resultM").innerHTML="correct "+correct+"  wrong "+wrong;
+    }
+</script>
+
+
+</body>
+</html>
