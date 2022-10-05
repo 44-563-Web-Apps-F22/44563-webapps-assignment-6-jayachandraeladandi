@@ -8,9 +8,9 @@
 
     <form>
         <label for="form1_secret">Enter the secret musician name</label>
-        <input id="form1_secret" name="form1_secret" type="password" min=10 max=50 step=2 value="John Lennon">
+        <input id="form1_secret" name="form1_secret" type="password" min=10 max=50 step=2 value="John Lennon"> <br>
         <label for="form2_guess">Guess the musician</label>
-        <input id="form2_guess" name="form2_guess" type="text" autofocus>
+        <input id="form2_guess" name="form2_guess" type="text" autofocus> <br>
         <input type="button" onclick="checkGuess()" value="Check the guess">
     </form>
     <p id="resultM">Result is here</p>
@@ -52,7 +52,7 @@
                     break;
                 case 3:
                     document.getElementById("images").src = "Leafhoppers_400x400.jpg"
-                    useImage = 4
+                    useImage = 1
                     break;
             }
         }

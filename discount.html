@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <title>Discounts</title>
+ 
+<body>
+
+<h2>Jayachandra Eladandi computes discounts</h2>
+
+<form>
+    <label for="productAmount">Enter base Amount </label>
+    <input type ="number" id="productAmount" name="form1_age"  value=30> <br>
+
+    <label for="discountAmount">Enter the discount percentage</label>
+    <input type ="number" id="discountAmount" name="form1_nick" autofocus value=10> <br>
+
+    <input type="button" onclick="discount()" value="Apply discount">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function discount(){
+    console.log("Adding method for discount")
+    inputamount = document.getElementById("productAmount").value
+    disamount= document.getElementById("discountAmount").value
+    let result = ""
+    let a = 1
+    while(a < 6) {
+        result += a * (inputamount-(inputamount*disamount/100))+" "
+        console.log(result)
+        a++
+    }
+    document.getElementById("result").innerHTML = result
+    
+    
+    }
+
+</script>
+
+</body>
+</html> 
